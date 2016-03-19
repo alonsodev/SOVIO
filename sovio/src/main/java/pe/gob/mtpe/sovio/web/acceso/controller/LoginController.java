@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import pe.gob.mtpe.sovio.bean.simintra1.SITBUsuario;
 import pe.gob.mtpe.sovio.web.acceso.bean.Usuario;
 
 /**
@@ -35,7 +36,7 @@ public class LoginController {
 	@RequestMapping(value = "/api/login/", method = RequestMethod.POST)
 	public ResponseEntity<Usuario> loginProceso(@RequestBody Usuario usuario, UriComponentsBuilder ucBuilder) {
 		logger.info("Inicio - sesion de usuario codPersonal = {}.", usuario.getV_codPersonal());
-		 
+		SITBUsuario test = new SITBUsuario();
       /*  if (userService.isUserExist(user)) {
             System.out.println("A User with name " + user.getUsername() + " already exist");
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
